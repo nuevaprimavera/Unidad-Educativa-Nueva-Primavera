@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Galería | Unidad Educativa Nueva Primavera</title>
+
+<style>
+
+body{
+margin:0;
+font-family:'Segoe UI',sans-serif;
+background:linear-gradient(to bottom,#001f3f,#5a5a5a,#7a0000);
+color:white;
+overflow-x:hidden;
+}
+
+/* HEADER */
+header{
+display:flex;
+align-items:center;
+justify-content:center;
+gap:20px;
+padding:25px;
+animation:fadeDown 1s ease;
+}
+
+header img{
+width:95px;
+}
+
+header h1{
+font-size:28px;
+text-align:center;
+}
+
+/* MENU */
+nav{
+background:rgba(0,0,0,0.25);
+backdrop-filter:blur(8px);
+padding:10px 0;
+position:sticky;
+top:0;
+z-index:1000;
+}
+
+nav ul{
+list-style:none;
+display:flex;
+justify-content:center;
+gap:35px;
+margin:0;
+padding:0;
+}
+
+nav ul li{
+position:relative;
+}
+
+nav ul li a{
+color:white;
+text-decoration:none;
+font-weight:600;
+padding:10px 15px;
+border-radius:6px;
+transition:0.3s;
+display:block;
+}
+
+nav ul li a:hover{
+background:rgba(255,255,255,0.15);
+}
+
+.submenu{
+display:none;
+position:absolute;
+top:100%;
+left:0;
+background:rgba(0,0,0,0.95);
+min-width:230px;
+max-height:420px;
+overflow-y:auto;
+border-radius:10px;
+padding:5px 0;
+z-index:2000;
+}
+
+nav ul li:hover .submenu{
+display:block;
+}
+
+.submenu li a{
+display:block;
+padding:10px 15px;
+}
+
+/* CONTENIDO */
+.main{
+max-width:1100px;
+margin:60px auto;
+padding:0 20px;
+}
+
+/* SECCIONES */
+.section{
+display:flex;
+align-items:center;
+justify-content:space-between;
+margin-bottom:80px;
+gap:40px;
+flex-wrap:wrap;
+}
+
+.section.reverse{
+flex-direction:row-reverse;
+}
+
+/* TEXTO */
+.texto{
+width:48%;
+min-width:300px;
+}
+
+.texto h2{
+font-size:26px;
+margin-bottom:15px;
+}
+
+.texto p{
+line-height:1.6;
+font-size:17px;
+}
+
+/* CONTENEDOR CARRUSEL */
+.carousel-container{
+width:48%;
+min-width:300px;
+}
+
+/* CARRUSEL */
+.carousel{
+position:relative;
+width:100%;
+height:350px;
+overflow:hidden;
+border-radius:15px;
+box-shadow:0 10px 25px rgba(0,0,0,0.4);
+}
+
+.carousel img{
+position:absolute;
+width:100%;
+height:100%;
+object-fit:cover;
+opacity:0;
+transition:opacity 1s ease;
+}
+
+.carousel img.active{
+opacity:1;
+}
+
+/* DOTS */
+.dots{
+display:flex;
+justify-content:center;
+gap:8px;
+margin-top:10px;
+}
+
+.dot{
+width:10px;
+height:10px;
+border-radius:50%;
+background:rgba(255,255,255,0.4);
+}
+
+.dot.active{
+background:white;
+}
+
+/* ANIMACIÓN */
+@keyframes fadeDown{
+from{opacity:0; transform:translateY(-20px);}
+to{opacity:1; transform:translateY(0);}
+}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+.section{
+flex-direction:column;
+}
+
+.section.reverse{
+flex-direction:column;
+}
+
+.texto, .carousel-container{
+width:100%;
+}
+
+.carousel{
+height:250px;
+}
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+<img src="imagenes/sello.png">
+<h1>UNIDAD EDUCATIVA<br>NUEVA PRIMAVERA</h1>
+</header>
+
+<nav>
+<ul>
+<li><a href="index.html">Inicio</a></li>
+<li><a href="quienes-somos.html">Quiénes somos</a></li>
+
+<li>
+<a href="quienes-somos.html">Oferta académica ▾</a>
+<div class="submenu">
+<a href="inicial1.html">Inicial I</a>
+<a href="primero.html">Primero</a>
+<a href="segundo.html">Segundo</a>
+<a href="tercero.html">Tercero A</a>
+<a href="tercerob.html">Tercero B</a>
+<a href="cuarto.html">Cuarto</a>
+<a href="quinto.html">Quinto</a>
+<a href="sexto.html">Sexto</a>
+<a href="septimo.html">Séptimo</a>
+<a href="octavo.html">Octavo</a>
+<a href="noceno.html">Noveno</a>
+<a href="decimo.html">Décimo</a>
+<a href="primero-bach.html">Primero Bachillerato</a>
+<a href="segundo-bach.html">Segundo Bachillerato</a>
+<a href="tercero-bach.html">Tercero Bachillerato</a>
+<a href="area-ciencias.html">Área Ciencias</a>
+<a href="area-informatica.html">Área Informática</a>
+<a href="area-electronica.html">Área Electrónica</a>
+<a href="areas-complementarias.html">Áreas Complementarias</a>
+</div>
+</li>
+
+<li><a href="galeria.html">Galería</a></li>
+<li><a href="contactos.html">Contactos</a></li>
+</ul>
+</nav>
+
+<main class="main">
+
+<!-- SECCIÓN 1 -->
+<div class="section">
+<div class="texto">
+<h2>Momentos que inspiran</h2>
+<p>
+Cada imagen refleja el esfuerzo, la alegría y el crecimiento de nuestros estudiantes.
+Aquí no solo se aprende, se vive, se comparte y se construyen recuerdos inolvidables.
+</p>
+</div>
+
+<div class="carousel-container">
+<div class="carousel" id="c1">
+<img src="primerobach/img1.jpeg" class="active">
+<img src="primerobach/img2.jpeg">
+<img src="tercerobach/img5.jpeg">
+<img src="tercerobach/img6.jpeg">
+<img src="tercerobach/img7.jpeg">
+<img src="decimo/img3.jpeg">
+<img src="decimo/img5.jpeg">
+</div>
+<div class="dots" id="d1"></div>
+</div>
+</div>
+
+<!-- SECCIÓN 2 -->
+<div class="section reverse">
+<div class="texto">
+<h2>Aprender haciendo</h2>
+<p>
+Nuestros estudiantes desarrollan habilidades a través de experiencias reales,
+fomentando creatividad, pensamiento crítico y trabajo en equipo.
+</p>
+</div>
+
+<div class="carousel-container">
+<div class="carousel" id="c2">
+<img src="primero/primero img1.jpeg" class="active">
+<img src="primero/primero img2.jpeg">
+<img src="sexto/img6.jpeg">
+<img src="sexto/img7.jpeg">
+<img src="cuarto/img4.jpeg">
+<img src="cuarto/img5.jpeg">
+</div>
+<div class="dots" id="d2"></div>
+</div>
+</div>
+
+<!-- SECCIÓN 3 -->
+<div class="section">
+<div class="texto">
+<h2>Formando el futuro</h2>
+<p>
+Cada paso en nuestra institución es una preparación para el mañana,
+donde los estudiantes se convierten en líderes, soñadores y agentes de cambio.
+</p>
+</div>
+
+<div class="carousel-container">
+<div class="carousel" id="c3">
+<img src="areainfo/img1.jpeg" class="active">
+<img src="areainfo/img2.jpeg">
+<img src="areaelec/img2.jpeg">
+<img src="areaelec/img3.jpeg">
+<img src="areascomp/img7.jpeg">
+<img src="areascomp/img8.jpeg">
+</div>
+<div class="dots" id="d3"></div>
+</div>
+</div>
+
+</main>
+
+<script>
+
+function crearCarrusel(idCarousel, idDots){
+const slides=document.querySelectorAll(`#${idCarousel} img`);
+const dotsContainer=document.getElementById(idDots);
+let index=0;
+
+slides.forEach((_,i)=>{
+const dot=document.createElement("div");
+dot.classList.add("dot");
+if(i===0) dot.classList.add("active");
+dotsContainer.appendChild(dot);
+});
+
+const dots=dotsContainer.querySelectorAll(".dot");
+
+function showSlide(i){
+slides.forEach((img,idx)=>{
+img.classList.toggle("active",idx===i);
+dots[idx].classList.toggle("active",idx===i);
+});
+index=i;
+}
+
+setInterval(()=>{
+index=(index+1)%slides.length;
+showSlide(index);
+},4000);
+}
+
+crearCarrusel("c1","d1");
+crearCarrusel("c2","d2");
+crearCarrusel("c3","d3");
+
+</script>
+
+</body>
+</html>

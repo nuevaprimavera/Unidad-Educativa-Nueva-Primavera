@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unidad Educativa Nueva Primavera</title>
+
+<style>
+
+body{
+margin:0;
+font-family:'Segoe UI',sans-serif;
+background:linear-gradient(to bottom,#001f3f,#5a5a5a,#7a0000);
+color:white;
+overflow-x:hidden;
+}
+
+
+header{
+display:flex;
+align-items:center;
+justify-content:center;
+gap:20px;
+padding:25px;
+animation:fadeDown 1s ease;
+}
+
+header img{
+width:95px;
+}
+
+header h1{
+font-size:28px;
+letter-spacing:2px;
+text-align:center;
+}
+
+
+
+nav{
+background:rgba(0,0,0,0.25);
+backdrop-filter:blur(8px);
+padding:10px 0;
+position:sticky;
+top:0;
+z-index:1000;
+}
+
+nav ul{
+list-style:none;
+display:flex;
+justify-content:center;
+gap:35px;
+margin:0;
+padding:0;
+}
+
+nav ul li{
+position:relative;
+}
+
+nav ul li a{
+color:white;
+text-decoration:none;
+font-weight:600;
+padding:10px 15px;
+border-radius:6px;
+transition:0.3s;
+}
+
+nav ul li a:hover{
+background:rgba(255,255,255,0.15);
+}
+
+.submenu{
+display:none;
+position:absolute;
+top:100%;
+left:0;
+background:rgba(0,0,0,0.95);
+min-width:230px;
+max-height:420px;
+overflow-y:auto;
+border-radius:10px;
+padding:5px 0;
+box-shadow:0 8px 20px rgba(0,0,0,0.4);
+}
+
+nav ul li:hover .submenu{
+display:block;
+}
+
+.submenu li a{
+padding:10px 15px;
+display:block;
+}
+
+.submenu li a:hover{
+background:#7a0000;
+}
+
+
+
+.info-container{
+max-width:1100px;
+margin:60px auto;
+display:flex;
+gap:30px;
+}
+
+.info-box{
+background:rgba(255,255,255,0.08);
+border-radius:15px;
+cursor:pointer;
+width:50%;
+transition:0.4s ease;
+box-shadow:0 10px 25px rgba(0,0,0,0.3);
+}
+
+.info-box:hover{
+transform:translateY(-5px);
+}
+
+.info-title{
+padding:18px;
+font-size:22px;
+font-weight:bold;
+text-align:center;
+background:rgba(0,0,0,0.35);
+border-radius:15px 15px 0 0;
+}
+
+.info-content{
+display:none;
+padding:20px;
+text-align:center;
+line-height:1.6;
+animation:fadeIn 0.4s ease;
+}
+
+.info-box.active{
+width:100%;
+}
+
+.info-box.hidden{
+display:none;
+}
+
+.info-box.active .info-content{
+display:block;
+}
+
+
+
+.carousel{
+position:relative;
+width:90%;
+max-width:1100px;
+height:750px;
+margin:50px auto;
+overflow:hidden;
+border-radius:20px;
+box-shadow:0 15px 35px rgba(0,0,0,0.5);
+}
+
+.carousel img{
+position:absolute;
+width:100%;
+height:100%;
+object-fit:cover;
+opacity:0;
+transition:opacity 1.2s ease;
+}
+
+.carousel img.active{
+opacity:1;
+}
+
+.dots{
+display:flex;
+justify-content:center;
+gap:12px;
+margin-top:15px;
+}
+
+.dot{
+width:14px;
+height:14px;
+border-radius:50%;
+background:rgba(255,255,255,0.4);
+cursor:pointer;
+transition:0.3s;
+}
+
+.dot.active{
+background:white;
+transform:scale(1.2);
+}
+
+
+
+@keyframes fadeIn{
+from{opacity:0;transform:translateY(10px);}
+to{opacity:1;transform:translateY(0);}
+}
+
+@keyframes fadeDown{
+from{opacity:0;transform:translateY(-20px);}
+to{opacity:1;transform:translateY(0);}
+}
+
+
+
+@media(max-width:900px){
+.info-container{
+flex-direction:column;
+}
+
+.info-box{
+width:100%;
+}
+
+.carousel{
+height:350px;
+}
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+<img src="imagenes/sello.png">
+<h1>UNIDAD EDUCATIVA<br>NUEVA PRIMAVERA</h1>
+</header>
+
+<nav>
+<ul>
+<li><a href="index.html">Inicio</a></li>
+<li><a href="quienes-somos.html">Quiénes somos</a></li>
+
+<li>
+<a href="#">Oferta Académica</a>
+<ul class="submenu">
+
+<li><a href="inicial1.html">Inicial I</a></li>
+<li><a href="primero.html">Primero</a></li>
+<li><a href="segundo.html">Segundo</a></li>
+<li><a href="tercero.html">Tercero A</a></li>
+<li><a href="tercerob.html">Tercero B</a></li>
+<li><a href="cuarto.html">Cuarto</a></li>
+<li><a href="quinto.html">Quinto</a></li>
+<li><a href="sexto.html">Sexto</a></li>
+<li><a href="septimo.html">Séptimo</a></li>
+<li><a href="octavo.html">Octavo</a></li>
+<li><a href="noveno.html">Noveno</a></li>
+<li><a href="decimo.html">Décimo</a></li>
+<li><a href="primero-bach.html">Primero Bachillerato</a></li>
+<li><a href="segundo-bach.html">Segundo Bachillerato</a></li>
+<li><a href="tercero-bach.html">Tercero Bachillerato</a></li>
+<li><a href="area-ciencias.html">Área Ciencias</a></li>
+<li><a href="area-informatica.html">Área Informática</a></li>
+<li><a href="area-electronica.html">Área Electrónica</a></li>
+<li><a href="areas-complementarias.html">Áreas Complementarias</a></li>
+
+</ul>
+</li>
+
+<li><a href="galeria.html">Galería</a></li>
+<li><a href="contactos.html">Contactos</a></li>
+</ul>
+</nav>
+
+<div class="info-container">
+
+<div class="info-box" id="mision">
+<div class="info-title">MISIÓN</div>
+<div class="info-content">
+Somos una institución educativa comprometida con la formación integral de niños, niñas y jóvenes, brindando una educación de calidad basada en principios éticos, morales y académicos que contribuyan al desarrollo de ciudadanos responsables, críticos y comprometidos con la sociedad. A través de una enseñanza innovadora y el fortalecimiento de competencias científicas, tecnológicas y humanísticas, ofrecemos una preparación sólida en Bachillerato en Ciencias y en las áreas técnicas de Electrónica e Informática, promoviendo el aprendizaje continuo, la creatividad, el liderazgo y el uso responsable de la tecnología para afrontar con éxito los retos del mundo actual.
+</div>
+</div>
+
+<div class="info-box" id="vision">
+<div class="info-title">VISIÓN</div>
+<div class="info-content">
+Ser una institución educativa líder y referente en la formación académica y técnica, reconocida por su excelencia, innovación y compromiso con el desarrollo integral de sus estudiantes. Aspiramos a formar bachilleres con amplios conocimientos científicos y tecnológicos, capaces de desenvolverse con éxito en la educación superior, el ámbito laboral y la vida personal. Buscamos consolidarnos como una comunidad educativa que fomente la investigación, el emprendimiento, la inclusión y los valores humanos, contribuyendo al progreso de la sociedad y al desarrollo sostenible de nuestro entorno
+</div>
+</div>
+
+</div>
+
+<div class="carousel">
+    <img src="imagenes/img 2.jpeg" class="active">
+    <img src="imagenes/img 3.jpeg">
+    <img src="imagenes/img 4.jpeg">
+    <img src="imagenes/img 5.jpeg">
+    <img src="imagenes/img 6.jpeg">
+    <img src="imagenes/img 7.jpeg">
+    <img src="imagenes/img 8.jpeg">
+    <img src="imagenes/img 9.jpeg">
+	<img src="imagenes/img10.jpeg">
+</div>
+
+<div class="dots"></div>
+
+<script>
+
+
+
+const boxes=document.querySelectorAll(".info-box");
+
+boxes.forEach(box=>{
+box.addEventListener("click",()=>{
+boxes.forEach(b=>{
+if(b!==box){
+b.classList.add("hidden");
+b.classList.remove("active");
+}
+});
+box.classList.toggle("active");
+if(!box.classList.contains("active")){
+boxes.forEach(b=>b.classList.remove("hidden"));
+}
+});
+});
+
+const slides=document.querySelectorAll(".carousel img");
+const dotsContainer=document.querySelector(".dots");
+let index=0;
+
+slides.forEach((_,i)=>{
+const dot=document.createElement("div");
+dot.classList.add("dot");
+if(i===0) dot.classList.add("active");
+dot.addEventListener("click",()=>showSlide(i));
+dotsContainer.appendChild(dot);
+});
+
+const dots=document.querySelectorAll(".dot");
+
+function showSlide(i){
+slides.forEach((img,idx)=>{
+img.classList.toggle("active",idx===i);
+dots[idx].classList.toggle("active",idx===i);
+});
+index=i;
+}
+
+setInterval(()=>{
+index=(index+1)%slides.length;
+showSlide(index);
+},4000);
+
+</script>
+
+</body>
+</html>
+

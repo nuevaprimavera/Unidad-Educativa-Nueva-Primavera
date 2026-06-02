@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title> Área Electrónica | Unidad Educativa Nueva Primavera</title>
+
+<style>
+:root{--azul:#001f3f;--gris:#5a5a5a;--rojo:#7a0000;}
+body{margin:0;font-family:'Segoe UI',sans-serif;background:linear-gradient(to bottom,var(--azul),var(--gris),var(--rojo));color:white;overflow-x:hidden;}
+@keyframes fadeDown{from{opacity:0;transform:translateY(-20px);}to{opacity:1;transform:translateY(0);}}
+.header{display:flex;justify-content:center;align-items:center;gap:15px;padding:25px 15px 15px;animation:fadeDown 1s ease;}
+.sello{width:90px;}
+.titulo{font-size:28px;font-weight:800;text-align:center;}
+.menu{display:flex;justify-content:center;margin-top:5px;}
+.menu ul{list-style:none;display:flex;gap:30px;padding:0;margin:0;}
+.menu li{position:relative;}
+.menu a{text-decoration:none;color:white;font-weight:600;padding:8px 14px;border-radius:6px;transition:.3s;}
+.menu a:hover{background:rgba(255,255,255,0.15);}
+.submenu{position:absolute;top:100%;left:0;background:#111;min-width:220px;border-radius:10px;padding:8px 0;display:none;box-shadow:0 10px 25px rgba(0,0,0,0.5);max-height:350px;overflow-y:auto;z-index:1000;}
+.submenu a{display:block;padding:10px 15px;font-size:14px;}
+.submenu a:hover{background:var(--rojo);}
+.menu li:hover .submenu{display:block;}
+.main{max-width:1100px;margin:50px auto 60px;padding:0 20px;text-align:center;}
+.titulo-seccion{background:rgba(255,255,255,0.15);border:1px solid rgba(255,255,255,0.3);padding:15px;border-radius:12px;font-size:22px;font-weight:800;margin-bottom:25px;backdrop-filter:blur(4px);}
+.descripcion{max-width:900px;margin:0 auto 40px;font-size:17px;line-height:1.7;}
+.carousel{position:relative;width:90%;max-width:950px;height:620px;margin:0 auto;overflow:hidden;border-radius:16px;box-shadow:0 15px 35px rgba(0,0,0,0.4);}
+.carousel img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity 1s ease;}
+.carousel img.show{opacity:1;}
+.dots{display:flex;justify-content:center;gap:10px;margin-top:15px;}
+.dot{width:12px;height:12px;border-radius:50%;background:rgba(255,255,255,.4);transition:.3s;cursor:pointer;}
+.dot.active{background:white;transform:scale(1.2);}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:25px;margin-top:50px;}
+.card{background:rgba(255,255,255,0.1);padding:20px;border-radius:15px;backdrop-filter:blur(4px);transition:.4s;}
+.card:hover{transform:translateY(-8px);background:rgba(255,255,255,0.18);}
+.card h3{margin-top:0;}
+@media(max-width:900px){.carousel{height:250px;}.header{flex-direction:column;}}
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"></head>
+
+<body>
+<header class="header">
+<img src="imagenes/sello.png" class="sello">
+<div class="titulo">UNIDAD EDUCATIVA<br>NUEVA PRIMAVERA</div>
+</header>
+
+<nav class="menu">
+<ul>
+<li><a href="index.html">Inicio</a></li>
+<li><a href="#">Quiénes somos</a></li>
+<li>
+<a href="#">Oferta académica ▾</a>
+<div class="submenu">
+<a href="inicial1.html">Inicial I</a>
+<a href="primero.html">Primero</a>
+<a href="segundo.html">Segundo</a>
+<a href="tercero.html">Tercero A</a>
+<a href="tercerob.html">Tercero B</a>
+<a href="cuarto.html">Cuarto</a>
+<a href="quinto.html">Quinto</a>
+<a href="sexto.html">Sexto</a>
+<a href="septimo.html">Séptimo</a>
+<a href="octavo.html">Octavo</a>
+<a href="noveno.html">Noveno</a>
+<a href="decimo.html">Décimo</a>
+<a href="primero-bach.html">Primero Bachillerato</a>
+<a href="segundo-bach.html">Segundo Bachillerato</a>
+<a href="tercero-bach.html">Tercero Bachillerato</a>
+<a href="area-ciencias.html">Área Ciencias</a>
+<a href="area-informatica.html">Área Informática</a>
+<a href="area-electronica.html">Área Electrónica</a>
+<a href="areas-complementarias.html">Áreas Complementarias</a>
+</div>
+</li>
+<li><a href="galeria.html">Galería</a></li>
+<li><a href="contactos.html">Contactos</a></li>
+</ul>
+</nav>
+
+<main class="main">
+<div class="titulo-seccion">BACHILLERATO TÉCNICO ELECTRÓNICA </div>
+<div class="descripcion">
+En el área de Electrónica se fomenta el desarrollo de
+habilidades técnicas relacionadas con el funcionamiento
+y mantenimiento de equipos electrónicos. Los estudiantes
+aprenden principios básicos de tecnología y reparación
+de dispositivos, fortaleciendo su formación práctica
+y tecnológica.
+</div>
+
+<div class="carousel" id="carousel">
+<img src="areaelec/img1.jpeg" class="show">
+<img src="areaelec/img2.jpeg">
+<img src="areaelec/img3.jpeg">
+
+
+</div>
+<div class="dots" id="dots"></div>
+<div class="cards">
+
+<div class="card">
+<h3>Mantenimiento Técnico</h3>
+<p>
+Formación en reparación y mantenimiento de equipos
+electrónicos y sistemas tecnológicos.
+</p>
+</div>
+
+<div class="card">
+<h3>Sistemas Electrónicos</h3>
+<p>
+Los estudiantes aprenden sobre el funcionamiento de
+circuitos electrónicos y el uso de diferentes
+componentes tecnológicos. Se desarrollan habilidades
+para comprender cómo operan los sistemas electrónicos
+en distintos dispositivos y aplicaciones tecnológicas.
+</p>
+</div>
+
+
+</div>
+
+</div>
+</div>
+
+<script>
+const slides=document.querySelectorAll('#carousel img');
+const dotsContainer=document.getElementById('dots');
+let current=0;
+slides.forEach((_,i)=>{const dot=document.createElement('div');dot.classList.add('dot');dot.addEventListener('click',()=>showSlide(i));dotsContainer.appendChild(dot);});
+const dots=document.querySelectorAll('.dot');
+function showSlide(i){slides.forEach((s,index)=>{s.classList.remove('show');dots[index].classList.remove('active');});slides[i].classList.add('show');dots[i].classList.add('active');current=i;}
+setInterval(()=>{let next=(current+1)%slides.length;showSlide(next);},4000);
+showSlide(0);
+</script>
+</body>
+</html><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Documento sin t&iacute;tulo</title>
+</head>
+
+<body>
+</body>
+</html>
+
+
